@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../jacoco-resources/report.gif" type="image/gif"/><title>ShipmentEntityMapperImpl.java</title><link rel="stylesheet" href="../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../index.html" class="el_report">com.itxiop.transport:jacoco-report-aggregate</a> &gt; <a href="../index.html" class="el_bundle">hiring-challenge-infrastructure</a> &gt; <a href="index.source.html" class="el_package">com.itxiop.transport.infrastructure.repository.shipment</a> &gt; <span class="el_source">ShipmentEntityMapperImpl.java</span></div><h1>ShipmentEntityMapperImpl.java</h1><pre class="source lang-java linenums">package com.itxiop.transport.infrastructure.repository.shipment;
+
+import com.itxiop.transport.domain.entities.City;
+import com.itxiop.transport.domain.entities.Shipment;
+import com.itxiop.transport.domain.shipment.vo.ShipmentInput;
+import com.itxiop.transport.infrastructure.repository.city.CityEntity;
+import java.util.ArrayList;
+import java.util.List;
+import javax.annotation.processing.Generated;
+import org.springframework.stereotype.Component;
+
+@Generated(
+    value = &quot;org.mapstruct.ap.MappingProcessor&quot;,
+    date = &quot;2024-07-26T11:34:31+0200&quot;,
+    comments = &quot;version: 1.6.0.Beta1, compiler: javac, environment: Java 17.0.4.1 (Eclipse Adoptium)&quot;
+)
+@Component
+<span class="fc" id="L18">public class ShipmentEntityMapperImpl implements ShipmentEntityMapper {</span>
+
+    @Override
+    public Shipment toDomainEntity(ShipmentEntity shipment) {
+<span class="pc bpc" id="L22" title="1 of 2 branches missed.">        if ( shipment == null ) {</span>
+<span class="nc" id="L23">            return null;</span>
+        }
+
+<span class="fc" id="L26">        Shipment shipment1 = new Shipment();</span>
+
+<span class="fc" id="L28">        shipment1.setId( shipment.getId() );</span>
+<span class="fc" id="L29">        shipment1.setDepartureDate( shipment.getDepartureDate() );</span>
+<span class="fc" id="L30">        shipment1.setExpectedArrivalDate( shipment.getExpectedArrivalDate() );</span>
+<span class="fc" id="L31">        shipment1.setOrigin( cityEntityToCity( shipment.getOrigin() ) );</span>
+<span class="fc" id="L32">        shipment1.setDestination( cityEntityToCity( shipment.getDestination() ) );</span>
+<span class="fc" id="L33">        shipment1.setStatus( shipment.getStatus() );</span>
+
+<span class="fc" id="L35">        return shipment1;</span>
+    }
+
+    @Override
+    public List&lt;Shipment&gt; toDomainEntities(List&lt;ShipmentEntity&gt; shipments) {
+<span class="nc bnc" id="L40" title="All 2 branches missed.">        if ( shipments == null ) {</span>
+<span class="nc" id="L41">            return null;</span>
+        }
+
+<span class="nc" id="L44">        List&lt;Shipment&gt; list = new ArrayList&lt;Shipment&gt;( shipments.size() );</span>
+<span class="nc bnc" id="L45" title="All 2 branches missed.">        for ( ShipmentEntity shipmentEntity : shipments ) {</span>
+<span class="nc" id="L46">            list.add( toDomainEntity( shipmentEntity ) );</span>
+<span class="nc" id="L47">        }</span>
+
+<span class="nc" id="L49">        return list;</span>
+    }
+
+    @Override
+    public ShipmentEntity fromDomainVO(ShipmentInput shipmentInput) {
+<span class="nc bnc" id="L54" title="All 2 branches missed.">        if ( shipmentInput == null ) {</span>
+<span class="nc" id="L55">            return null;</span>
+        }
+
+<span class="nc" id="L58">        ShipmentEntity shipmentEntity = new ShipmentEntity();</span>
+
+<span class="nc" id="L60">        shipmentEntity.setId( shipmentInput.getId() );</span>
+<span class="nc" id="L61">        shipmentEntity.setDepartureDate( shipmentInput.getDepartureDate() );</span>
+<span class="nc" id="L62">        shipmentEntity.setExpectedArrivalDate( shipmentInput.getExpectedArrivalDate() );</span>
+<span class="nc" id="L63">        shipmentEntity.setOrigin( cityToCityEntity( shipmentInput.getOrigin() ) );</span>
+<span class="nc" id="L64">        shipmentEntity.setDestination( cityToCityEntity( shipmentInput.getDestination() ) );</span>
+<span class="nc" id="L65">        shipmentEntity.setStatus( shipmentInput.getStatus() );</span>
+
+<span class="nc" id="L67">        return shipmentEntity;</span>
+    }
+
+    @Override
+    public ShipmentEntity fromDomainEntity(Shipment shipment) {
+<span class="nc bnc" id="L72" title="All 2 branches missed.">        if ( shipment == null ) {</span>
+<span class="nc" id="L73">            return null;</span>
+        }
+
+<span class="nc" id="L76">        ShipmentEntity shipmentEntity = new ShipmentEntity();</span>
+
+<span class="nc" id="L78">        shipmentEntity.setId( shipment.getId() );</span>
+<span class="nc" id="L79">        shipmentEntity.setDepartureDate( shipment.getDepartureDate() );</span>
+<span class="nc" id="L80">        shipmentEntity.setExpectedArrivalDate( shipment.getExpectedArrivalDate() );</span>
+<span class="nc" id="L81">        shipmentEntity.setOrigin( cityToCityEntity( shipment.getOrigin() ) );</span>
+<span class="nc" id="L82">        shipmentEntity.setDestination( cityToCityEntity( shipment.getDestination() ) );</span>
+<span class="nc" id="L83">        shipmentEntity.setStatus( shipment.getStatus() );</span>
+
+<span class="nc" id="L85">        return shipmentEntity;</span>
+    }
+
+    protected City cityEntityToCity(CityEntity cityEntity) {
+<span class="pc bpc" id="L89" title="1 of 2 branches missed.">        if ( cityEntity == null ) {</span>
+<span class="fc" id="L90">            return null;</span>
+        }
+
+<span class="nc" id="L93">        City city = new City();</span>
+
+<span class="nc" id="L95">        city.setCode( cityEntity.getCode() );</span>
+<span class="nc" id="L96">        city.setName( cityEntity.getName() );</span>
+<span class="nc" id="L97">        city.setHandlingCost( cityEntity.getHandlingCost() );</span>
+
+<span class="nc" id="L99">        return city;</span>
+    }
+
+    protected CityEntity cityToCityEntity(City city) {
+<span class="nc bnc" id="L103" title="All 2 branches missed.">        if ( city == null ) {</span>
+<span class="nc" id="L104">            return null;</span>
+        }
+
+<span class="nc" id="L107">        CityEntity cityEntity = new CityEntity();</span>
+
+<span class="nc" id="L109">        cityEntity.setCode( city.getCode() );</span>
+<span class="nc" id="L110">        cityEntity.setName( city.getName() );</span>
+<span class="nc" id="L111">        cityEntity.setHandlingCost( city.getHandlingCost() );</span>
+
+<span class="nc" id="L113">        return cityEntity;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

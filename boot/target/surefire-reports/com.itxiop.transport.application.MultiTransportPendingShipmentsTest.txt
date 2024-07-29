@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.itxiop.transport.application.MultiTransportPendingShipmentsTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 3, Time elapsed: 9.714 s -- in com.itxiop.transport.application.MultiTransportPendingShipmentsTest

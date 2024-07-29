@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Build-Jdk-Spec: 17
+Implementation-Title: com.itxiop.transport:hiring-challenge-application
+Implementation-Version: 0.1.0-SNAPSHOT
+Implementation-Vendor: Industria de Diseño Textil, S.A.
+Created-By: Maven Integration for Eclipse
+

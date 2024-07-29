@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.itxiop.transport.domain.usecase.ProcessPendingShipmentsUseCaseImplTest" time="8.855" tests="2" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\mwali\Downloads\Hiring-challenge\application\target\test-classes;C:\Users\mwali\Downloads\Hiring-challenge\application\target\classes;C:\Users\mwali\Downloads\Hiring-challenge\domain\target\hiring-challenge-domain-0.1.0-SNAPSHOT.jar;C:\Users\mwali\.m2\repository\org\slf4j\slf4j-api\2.0.12\slf4j-api-2.0.12.jar;C:\Users\mwali\.m2\repository\org\apache\commons\commons-lang3\3.13.0\commons-lang3-3.13.0.jar;C:\Users\mwali\.m2\repository\org\instancio\instancio-junit\4.5.0\instancio-junit-4.5.0.jar;C:\Users\mwali\.m2\repository\org\instancio\instancio-core\4.5.0\instancio-core-4.5.0.jar;C:\Users\mwali\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\mwali\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\mwali\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\mwali\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\mwali\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\mwali\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\mwali\.m2\repository\org\mockito\mockito-core\5.7.0\mockito-core-5.7.0.jar;C:\Users\mwali\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\mwali\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.12\byte-buddy-agent-1.14.12.jar;C:\Users\mwali\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\mwali\.m2\repository\org\mockito\mockito-junit-jupiter\5.7.0\mockito-junit-jupiter-5.7.0.jar;C:\Users\mwali\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\mwali\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\mwali\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;C:\Users\mwali\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Europe/Paris"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="FR"/>
+    <property name="sun.boot.library.path" value="C:\Users\mwali\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20221004-1257\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\mwali\AppData\Local\Temp\surefire1402745233108867692\surefirebooter-20240726113348376_3.jar C:\Users\mwali\AppData\Local\Temp\surefire1402745233108867692 2024-07-26T11-33-33_348-jvmRun1 surefire-20240726113348376_1tmp surefire_0-20240726113348376_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\mwali\Downloads\Hiring-challenge\application\target\test-classes;C:\Users\mwali\Downloads\Hiring-challenge\application\target\classes;C:\Users\mwali\Downloads\Hiring-challenge\domain\target\hiring-challenge-domain-0.1.0-SNAPSHOT.jar;C:\Users\mwali\.m2\repository\org\slf4j\slf4j-api\2.0.12\slf4j-api-2.0.12.jar;C:\Users\mwali\.m2\repository\org\apache\commons\commons-lang3\3.13.0\commons-lang3-3.13.0.jar;C:\Users\mwali\.m2\repository\org\instancio\instancio-junit\4.5.0\instancio-junit-4.5.0.jar;C:\Users\mwali\.m2\repository\org\instancio\instancio-core\4.5.0\instancio-core-4.5.0.jar;C:\Users\mwali\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\mwali\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\mwali\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\mwali\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\mwali\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\mwali\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\mwali\.m2\repository\org\mockito\mockito-core\5.7.0\mockito-core-5.7.0.jar;C:\Users\mwali\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\mwali\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.12\byte-buddy-agent-1.14.12.jar;C:\Users\mwali\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\mwali\.m2\repository\org\mockito\mockito-junit-jupiter\5.7.0\mockito-junit-jupiter-5.7.0.jar;C:\Users\mwali\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\mwali\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\mwali\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;C:\Users\mwali\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\mwali"/>
+    <property name="user.language" value="fr"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2022-08-12"/>
+    <property name="java.home" value="C:\Users\mwali\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20221004-1257\jre"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\mwali\Downloads\Hiring-challenge\application"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\mwali\AppData\Local\Temp\surefire1402745233108867692\surefirebooter-20240726113348376_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.4.1+1"/>
+    <property name="user.name" value="mwali"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-17.0.4.1+1"/>
+    <property name="localRepository" value="C:\Users\mwali\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="C:\Users\mwali\AppData\Local\Temp\"/>
+    <property name="java.version" value="17.0.4.1"/>
+    <property name="user.dir" value="C:\Users\mwali\Downloads\Hiring-challenge\application"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Users\mwali\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20221004-1257\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;--C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\dotnet\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\AMD\ATI.ACE\Core-Static;C:\Program Files\Git\cmd;C:\wamp64\bin\php\php7.4.26;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\Docker\Docker\resources\bin;C:\Users\mwali\AppData\Local\Microsoft\WindowsApps;C:\Users\mwali\AppData\Roaming\npm;C:\Users\mwali\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\mwali\AppData\Roaming\Composer\vendor\bin;C:\Users\mwali\AppData\Local\GitHubDesktop\bin;C:\platform-tools\;C:\Users\mwali\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20221004-1257\jre\bin;C:\tools\apache-maven-3.9.0\bin\;C:\Users\mwali\.dotnet\tools;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="17.0.4.1+1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="dijkstraComplexScenarioTest" classname="com.itxiop.transport.domain.usecase.ProcessPendingShipmentsUseCaseImplTest" time="8.773">
+    <system-out><![CDATA[11:34:03.234 [main] INFO  c.i.t.d.u.ProcessPendingShipmentsUseCaseImpl -- Processing shipment: Shipment(id=46b446a7-3003-4346-b889-ec63f1c068fd, departureDate=2024-01-01T09:00Z, expectedArrivalDate=2024-01-02T09:00Z, origin=City(code=4eb4b6b8-8d3d-435f-b319-dcf98a87e58e, name=A, handlingCost=0), destination=City(code=b67878b3-4b60-46aa-b906-75028382cdba, name=E, handlingCost=0), status=PENDING, routePlan=null)
+11:34:03.273 [main] INFO  c.i.t.d.u.ProcessPendingShipmentsUseCaseImpl -- Processing route: TRUCK
+11:34:03.300 [main] TRACE c.i.t.domain.usecase.GraphProcessor -- *** Evaluating dijkstra shortest path algorithm:
+11:34:03.320 [main] TRACE c.i.t.domain.usecase.GraphProcessor -- Visiting node [A]
+11:34:03.320 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> neighbor: [H] tentative cost: [PT8H] by TRUCK
+11:34:03.320 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> [?] tentative neighbor with a shorter route. Adding to path
+11:34:03.321 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> neighbor: [B] tentative cost: [PT4H] by TRUCK
+11:34:03.321 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> [?] tentative neighbor with a shorter route. Adding to path
+11:34:03.322 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> Marking node [A] as visited
+11:34:03.322 [main] TRACE c.i.t.domain.usecase.GraphProcessor -- Visiting node [B]
+11:34:03.322 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> neighbor: [H] tentative cost: [PT15H] by TRUCK
+11:34:03.322 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> neighbor: [C] tentative cost: [PT12H] by TRUCK
+11:34:03.323 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> [?] tentative neighbor with a shorter route. Adding to path
+11:34:03.323 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> Marking node [B] as visited
+11:34:03.323 [main] TRACE c.i.t.domain.usecase.GraphProcessor -- Visiting node [H]
+11:34:03.323 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> neighbor: [G] tentative cost: [PT9H] by TRUCK
+11:34:03.324 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> [?] tentative neighbor with a shorter route. Adding to path
+11:34:03.324 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> neighbor: [I] tentative cost: [PT15H] by TRUCK
+11:34:03.324 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> [?] tentative neighbor with a shorter route. Adding to path
+11:34:03.324 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> Marking node [H] as visited
+11:34:03.325 [main] TRACE c.i.t.domain.usecase.GraphProcessor -- Visiting node [G]
+11:34:03.325 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> neighbor: [F] tentative cost: [PT11H] by TRUCK
+11:34:03.325 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> [?] tentative neighbor with a shorter route. Adding to path
+11:34:03.325 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> neighbor: [I] tentative cost: [PT11H] by TRUCK
+11:34:03.331 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> [?] tentative neighbor with a shorter route. Adding to path
+11:34:03.331 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> Marking node [G] as visited
+11:34:03.332 [main] TRACE c.i.t.domain.usecase.GraphProcessor -- Visiting node [F]
+11:34:03.332 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> neighbor: [C] tentative cost: [PT15H] by TRUCK
+11:34:03.332 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> neighbor: [D] tentative cost: [PT25H] by TRUCK
+11:34:03.333 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> [?] tentative neighbor with a shorter route. Adding to path
+11:34:03.333 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> neighbor: [E] tentative cost: [PT21H] by TRUCK
+11:34:03.333 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> [?] tentative neighbor with a shorter route. Adding to path
+11:34:03.333 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> Marking node [F] as visited
+11:34:03.334 [main] TRACE c.i.t.domain.usecase.GraphProcessor -- Visiting node [I]
+11:34:03.334 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> neighbor: [C] tentative cost: [PT13H] by TRUCK
+11:34:03.334 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> Marking node [I] as visited
+11:34:03.334 [main] TRACE c.i.t.domain.usecase.GraphProcessor -- Discarding node [I] as it has already been visited
+11:34:03.334 [main] TRACE c.i.t.domain.usecase.GraphProcessor -- Visiting node [C]
+11:34:03.335 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> neighbor: [D] tentative cost: [PT19H] by TRUCK
+11:34:03.335 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> [?] tentative neighbor with a shorter route. Adding to path
+11:34:03.335 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> Marking node [C] as visited
+11:34:03.335 [main] TRACE c.i.t.domain.usecase.GraphProcessor -- Visiting node [D]
+11:34:03.336 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> neighbor: [E] tentative cost: [PT28H] by TRUCK
+11:34:03.336 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> Marking node [D] as visited
+11:34:03.336 [main] TRACE c.i.t.domain.usecase.GraphProcessor -- Discarding node [D] as it has already been visited
+11:34:03.336 [main] TRACE c.i.t.domain.usecase.GraphProcessor -- Visiting node [E]
+11:34:03.336 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> Marking node [E] as visited
+11:34:03.337 [main] TRACE c.i.t.domain.usecase.GraphProcessor -- *** Evaluation finished with Path [Route(id=42aff6ce-6a14-4098-ab0a-8d90100a2bc7, origin=City(code=4eb4b6b8-8d3d-435f-b319-dcf98a87e58e, name=A, handlingCost=0), destination=City(code=a3cd2ace-8b16-4ecd-a1ad-b0efc98cc4a1, name=H, handlingCost=0), transportType=TRUCK, cost=PT8H), Route(id=5f84269b-4604-486a-a21a-a2ebb05351aa, origin=City(code=f3230fc5-a797-42b1-914a-c6d9b2e474ba, name=G, handlingCost=0), destination=City(code=a3cd2ace-8b16-4ecd-a1ad-b0efc98cc4a1, name=H, handlingCost=0), transportType=TRUCK, cost=PT1H), Route(id=fcf3347d-faa6-4043-94e4-a02ec16ba04d, origin=City(code=f3230fc5-a797-42b1-914a-c6d9b2e474ba, name=G, handlingCost=0), destination=City(code=9fbb0ed4-eccb-4c87-8bca-870ecc8d1094, name=F, handlingCost=0), transportType=TRUCK, cost=PT2H), Route(id=5c2e5b00-d237-4fba-ba9d-c6e7eaa7b0f0, origin=City(code=9fbb0ed4-eccb-4c87-8bca-870ecc8d1094, name=F, handlingCost=0), destination=City(code=b67878b3-4b60-46aa-b906-75028382cdba, name=E, handlingCost=0), transportType=TRUCK, cost=PT10H)]
+11:34:03.348 [main] TRACE c.i.t.d.u.ProcessPendingShipmentsUseCaseImpl -- Time cost from [ A <-> E ] is PT21H
+11:34:03.349 [main] TRACE c.i.t.d.u.ProcessPendingShipmentsUseCaseImpl -- Path: A | (A -> [TRUCK] -> H) | (G -> [TRUCK] -> H) | (G -> [TRUCK] -> F) | (F -> [TRUCK] -> E)
+11:34:03.350 [main] INFO  c.i.t.d.u.ProcessPendingShipmentsUseCaseImpl -- Route processed in 77 ms
+11:34:03.351 [main] INFO  c.i.t.d.u.ProcessPendingShipmentsUseCaseImpl -- Saving route planification for shipment: A-E
+11:34:03.359 [main] INFO  c.i.t.d.u.ProcessPendingShipmentsUseCaseImpl -- Route saved in 86 ms
+Route(id=42aff6ce-6a14-4098-ab0a-8d90100a2bc7, origin=City(code=4eb4b6b8-8d3d-435f-b319-dcf98a87e58e, name=A, handlingCost=0), destination=City(code=a3cd2ace-8b16-4ecd-a1ad-b0efc98cc4a1, name=H, handlingCost=0), transportType=TRUCK, cost=PT8H)
+Route(id=5f84269b-4604-486a-a21a-a2ebb05351aa, origin=City(code=f3230fc5-a797-42b1-914a-c6d9b2e474ba, name=G, handlingCost=0), destination=City(code=a3cd2ace-8b16-4ecd-a1ad-b0efc98cc4a1, name=H, handlingCost=0), transportType=TRUCK, cost=PT1H)
+Route(id=fcf3347d-faa6-4043-94e4-a02ec16ba04d, origin=City(code=f3230fc5-a797-42b1-914a-c6d9b2e474ba, name=G, handlingCost=0), destination=City(code=9fbb0ed4-eccb-4c87-8bca-870ecc8d1094, name=F, handlingCost=0), transportType=TRUCK, cost=PT2H)
+Route(id=5c2e5b00-d237-4fba-ba9d-c6e7eaa7b0f0, origin=City(code=9fbb0ed4-eccb-4c87-8bca-870ecc8d1094, name=F, handlingCost=0), destination=City(code=b67878b3-4b60-46aa-b906-75028382cdba, name=E, handlingCost=0), transportType=TRUCK, cost=PT10H)
+]]></system-out>
+  </testcase>
+  <testcase name="dijkstraBasicTest" classname="com.itxiop.transport.domain.usecase.ProcessPendingShipmentsUseCaseImplTest" time="0.026">
+    <system-out><![CDATA[11:34:03.894 [main] INFO  c.i.t.d.u.ProcessPendingShipmentsUseCaseImpl -- Processing shipment: Shipment(id=347a97b3-98ab-4852-a69d-1394cbaf6795, departureDate=2024-01-01T09:00Z, expectedArrivalDate=2024-01-01T13:00Z, origin=City(code=9ad920f8-48aa-4dc5-aa64-c9a270b630c1, name=A, handlingCost=0), destination=City(code=9ad0bc19-3f35-4e48-9d21-e65effd6fd80, name=E, handlingCost=0), status=PENDING, routePlan=null)
+11:34:03.895 [main] INFO  c.i.t.d.u.ProcessPendingShipmentsUseCaseImpl -- Processing route: TRUCK
+11:34:03.895 [main] TRACE c.i.t.domain.usecase.GraphProcessor -- *** Evaluating dijkstra shortest path algorithm:
+11:34:03.897 [main] TRACE c.i.t.domain.usecase.GraphProcessor -- Visiting node [A]
+11:34:03.897 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> neighbor: [C] tentative cost: [PT1H] by TRUCK
+11:34:03.898 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> [?] tentative neighbor with a shorter route. Adding to path
+11:34:03.898 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> neighbor: [B] tentative cost: [PT3H] by TRUCK
+11:34:03.899 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> [?] tentative neighbor with a shorter route. Adding to path
+11:34:03.899 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> Marking node [A] as visited
+11:34:03.899 [main] TRACE c.i.t.domain.usecase.GraphProcessor -- Visiting node [C]
+11:34:03.899 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> neighbor: [D] tentative cost: [PT3H] by TRUCK
+11:34:03.899 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> [?] tentative neighbor with a shorter route. Adding to path
+11:34:03.900 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> neighbor: [B] tentative cost: [PT8H] by TRUCK
+11:34:03.900 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> Marking node [C] as visited
+11:34:03.900 [main] TRACE c.i.t.domain.usecase.GraphProcessor -- Visiting node [B]
+11:34:03.900 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> neighbor: [E] tentative cost: [PT4H] by TRUCK
+11:34:03.901 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> [?] tentative neighbor with a shorter route. Adding to path
+11:34:03.901 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> neighbor: [D] tentative cost: [PT8H] by TRUCK
+11:34:03.901 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> Marking node [B] as visited
+11:34:03.901 [main] TRACE c.i.t.domain.usecase.GraphProcessor -- Visiting node [D]
+11:34:03.901 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> neighbor: [E] tentative cost: [PT10H] by TRUCK
+11:34:03.901 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> Marking node [D] as visited
+11:34:03.902 [main] TRACE c.i.t.domain.usecase.GraphProcessor -- Visiting node [E]
+11:34:03.902 [main] TRACE c.i.t.domain.usecase.GraphProcessor --  >> Marking node [E] as visited
+11:34:03.902 [main] TRACE c.i.t.domain.usecase.GraphProcessor -- *** Evaluation finished with Path [Route(id=2891ef5c-492f-4b8b-b06f-963bbc66c4e4, origin=City(code=9ad920f8-48aa-4dc5-aa64-c9a270b630c1, name=A, handlingCost=0), destination=City(code=1ac67b7d-f282-48c6-808c-7eb78ef9a658, name=B, handlingCost=0), transportType=TRUCK, cost=PT3H), Route(id=df401ad5-6275-43f4-b1b2-ff34b23dca53, origin=City(code=1ac67b7d-f282-48c6-808c-7eb78ef9a658, name=B, handlingCost=0), destination=City(code=9ad0bc19-3f35-4e48-9d21-e65effd6fd80, name=E, handlingCost=0), transportType=TRUCK, cost=PT1H)]
+11:34:03.902 [main] TRACE c.i.t.d.u.ProcessPendingShipmentsUseCaseImpl -- Time cost from [ A <-> E ] is PT4H
+11:34:03.902 [main] TRACE c.i.t.d.u.ProcessPendingShipmentsUseCaseImpl -- Path: A | (A -> [TRUCK] -> B) | (B -> [TRUCK] -> E)
+11:34:03.903 [main] INFO  c.i.t.d.u.ProcessPendingShipmentsUseCaseImpl -- Route processed in 7 ms
+11:34:03.903 [main] INFO  c.i.t.d.u.ProcessPendingShipmentsUseCaseImpl -- Saving route planification for shipment: A-E
+11:34:03.904 [main] INFO  c.i.t.d.u.ProcessPendingShipmentsUseCaseImpl -- Route saved in 8 ms
+Route(id=2891ef5c-492f-4b8b-b06f-963bbc66c4e4, origin=City(code=9ad920f8-48aa-4dc5-aa64-c9a270b630c1, name=A, handlingCost=0), destination=City(code=1ac67b7d-f282-48c6-808c-7eb78ef9a658, name=B, handlingCost=0), transportType=TRUCK, cost=PT3H)
+Route(id=df401ad5-6275-43f4-b1b2-ff34b23dca53, origin=City(code=1ac67b7d-f282-48c6-808c-7eb78ef9a658, name=B, handlingCost=0), destination=City(code=9ad0bc19-3f35-4e48-9d21-e65effd6fd80, name=E, handlingCost=0), transportType=TRUCK, cost=PT1H)
+]]></system-out>
+  </testcase>
+</testsuite>
