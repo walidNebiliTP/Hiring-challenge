@@ -1,0 +1,29 @@
+todo 3: ¿Sabrías indicar a qué se debe? ¿Cómo podría resolverse? ¿Podría implementar una alternativa haciendo uso de
+ShipmentH2Repository.findShipmentDetails?
+
+
+- el problema que tenemos aqui se llama spring-hibernate-n1-problem. este problema tiene por causa la mayoria del tiempo el lazy loading o la mala configuracion de relaciones entre las entidades.  
+en nuestro : El problema se manifiesta aquí porque cada vez que accedes a los detalles de la ciudad (origen y destino) de cada envío (ShipmentEntity), Hibernate realiza una nueva consulta para recuperar esta información. Esto sucede si las relaciones no están configuradas correctamente para la carga de una sola consulta.
+
+-Solución propuesta
+
+Definir correctamente las relaciones entre ShipmentEntity y CityEntity:
+en ShippmentEntity:
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "CITY_ORIGIN_FK", insertable = false, updatable = false)
+    private CityEntity origin;
+
+    @Column(name = "CITY_ORIGIN_FK")
+    private String originCode;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "CITY_DESTINATION_FK", insertable = false, updatable = false)
+    private CityEntity destination;
+en CityEntity:
+    @OneToMany(mappedBy = "origin", fetch = FetchType.LAZY)
+    private List<ShipmentEntity> originShipments;
+
+    @OneToMany(mappedBy = "destination", fetch = FetchType.LAZY)
+    private List<ShipmentEntity> destinationShipments;
+
+y usar el lazy fetch para recuperar las entidades en una sola consulta.
