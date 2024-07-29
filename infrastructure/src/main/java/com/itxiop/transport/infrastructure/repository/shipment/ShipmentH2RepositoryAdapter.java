@@ -3,6 +3,7 @@ package com.itxiop.transport.infrastructure.repository.shipment;
 import com.itxiop.transport.domain.city.repository.CityRepositoryPort;
 import com.itxiop.transport.domain.entities.Route;
 import com.itxiop.transport.domain.entities.Shipment;
+import com.itxiop.transport.domain.exceptions.ResourceNotFoundException;
 import com.itxiop.transport.domain.shipment.repository.ShipmentRepositoryPort;
 import com.itxiop.transport.domain.shipment.vo.ShipmentInput;
 import lombok.RequiredArgsConstructor;
@@ -37,15 +38,29 @@ public class ShipmentH2RepositoryAdapter implements ShipmentRepositoryPort {
     Shipment shipment = shipmentEntityMapper.toDomainEntity(entity);
      log.info("Loading shipment with id: {}", shipment.getId());
 
-    // TODO #2: Set routes in shipment looking at routes map
-    // TODO #2: Set origin and destination in shipment from cityRepository
+     List<Route> shipmentRoutes = routes.get(id);
+     shipment.setRoutePlan(shipmentRoutes);
+
+     try {
+ 		shipment.setOrigin(cityRepositoryPort.findByCityCode(entity.getOriginCode()));
+		shipment.setDestination(cityRepositoryPort.findByCityCode(entity.getDestinationCode()));
+	
+     
+     } catch (ResourceNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
     return shipment;
   }
 
   @Override
   public void saveShipment(ShipmentInput shipment) {
     log.trace("Saving shipment with id: {}", shipment.getId());
-    shipmentH2Repository.save(shipmentEntityMapper.fromDomainVO(shipment));
+   ShipmentEntity entity = shipmentEntityMapper.fromDomainVO(shipment);
+   
+   entity.setOriginCode(shipment.getOriginCityCode());
+   entity.setDestinationCode(shipment.getDestinationCityCode());
+   shipmentH2Repository.save(entity);
     
   }
 
@@ -70,9 +85,18 @@ public class ShipmentH2RepositoryAdapter implements ShipmentRepositoryPort {
 
       return entities.stream().map(entity -> {
       Shipment shipment = shipmentEntityMapper.toDomainEntity(entity);
+      try {
+		shipment.setOrigin(cityRepositoryPort.findByCityCode(entity.getOriginCode()));
+		shipment.setDestination(cityRepositoryPort.findByCityCode(entity.getDestinationCode()));
 
-      // TODO #2: Set routes origin and destination
-      return shipment;
+      } catch (ResourceNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+      List<Route> shipmentRoutes = routes.get(shipment.getId());
+      shipment.setRoutePlan(shipmentRoutes);
+
+       return shipment;
     }).toList();
   }
 
