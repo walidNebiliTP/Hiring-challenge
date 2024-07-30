@@ -1,7 +1,9 @@
 package com.itxiop.transport.infrastructure;
 
+import com.itxiop.transport.domain.city.repository.CityRepositoryPort;
 import com.itxiop.transport.domain.entities.Shipment;
 import com.itxiop.transport.domain.shipment.repository.ShipmentRepositoryPort;
+import com.itxiop.transport.infrastructure.repository.city.CityH2Repository;
 import com.itxiop.transport.infrastructure.repository.city.CityRepositoryFileAdapter;
 import com.itxiop.transport.infrastructure.repository.shipment.*;
 import org.instancio.Instancio;
@@ -28,6 +30,8 @@ class ShipmentH2RepositoryPortTest {
   @Autowired
   private ShipmentH2Repository shipmentH2Repository;
 
+  @Autowired
+  CityH2Repository cityH2Repository;
   /**
    * Find shipments test.
    */
@@ -36,9 +40,8 @@ class ShipmentH2RepositoryPortTest {
 
     ShipmentEntity shipmentToSave =
         Instancio.of(ShipmentEntity.class).create();
-    // TODO #5: Consider updating this test once ShipmentEntity is associated with a database CityEntity
-    // this.cityH2Repository.save(shipmentToSave.getOrigin());
-    // this.cityH2Repository.save(shipmentToSave.getDestination());
+     this.cityH2Repository.save(shipmentToSave.getOrigin());
+     this.cityH2Repository.save(shipmentToSave.getDestination());
     this.shipmentH2Repository.save(shipmentToSave);
     final Shipment shipment = this.repositoryPort.findShipmentById(shipmentToSave.getId());
     Assertions.assertNotNull(shipment);

@@ -11,6 +11,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.validator.internal.util.DomainNameUtil;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
@@ -34,11 +36,12 @@ public class RouteRepositoryFileAdapter implements RouteRepositoryPort, Initiali
 
   @Value("${graph.folder}")
   private String graphFolder;
-
+  
+  @Qualifier("cityRepositoryFileAdapter")
   private final CityRepositoryPort cityRepositoryPort;
 
   private final Map<TransportTypeEnum, List<Route>> routeBook = new HashMap<>();
-
+ 
   @Override
   public void afterPropertiesSet() throws Exception {
     readAllGraphs(graphFolder);
