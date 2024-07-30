@@ -6,6 +6,8 @@ import com.itxiop.transport.domain.entities.Shipment;
 import com.itxiop.transport.domain.exceptions.ResourceNotFoundException;
 import com.itxiop.transport.domain.shipment.repository.ShipmentRepositoryPort;
 import com.itxiop.transport.domain.shipment.vo.ShipmentInput;
+import com.itxiop.transport.domain.vo.ShipmentStatusEnum;
+
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -103,6 +105,6 @@ public class ShipmentH2RepositoryAdapter implements ShipmentRepositoryPort {
   @Override
   public void deleteProcessedShipments() {
     log.trace("Delete all processed shipments");
-    // TODO #4: Implemente deleted processed shipments
+    shipmentH2Repository.deleteProcessedShipments(ShipmentStatusEnum.PENDING.name());
   }
 }
